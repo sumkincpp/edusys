@@ -1,0 +1,7 @@
+Brief Introduction to Authorization
+
+http://www.tonyamoyal.com/2010/07/28/rails-authentication-with-devise-and-cancan-customizing-devise-controllers/
+http://www.communityguides.eu/articles/9
+
+RoR Guides ->
+http://guides.rubyonrails.org/association_basics.html
