@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 
 group :development, :production do
   gem 'mysql2'
+  gem 'pg'
 end
 
 group :test do 
