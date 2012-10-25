@@ -26,9 +26,9 @@ test: &test
 production:
   host: mysql-srv25791.ht-systems.ru
   adapter: mysql2
-  database: srv25791_konk_cw
-  username: srv25791_konkurs
-  password: blAncHa-_9
+  database: 
+  username: 
+  password: 
 
 cucumber:
   <<: *test
