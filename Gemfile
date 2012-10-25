@@ -2,14 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-group :development do
+group :development, :production do
   gem 'mysql2'
 end
 
-group :production, :test do 
+group :test do 
   gem 'sqlite3'
 end
-
 
 group :production do 
 #  gem 'mysql'
