@@ -1,10 +1,10 @@
 class GroupsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :validate_admin!
 
   # GET /groups
   # GET /groups.json
   def index
-
     @groups = Group.all
 
     respond_to do |format|

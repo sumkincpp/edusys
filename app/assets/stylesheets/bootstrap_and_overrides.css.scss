@@ -1,3 +1,25 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+body { padding-top: 20px; }
 @import "bootstrap-responsive";
+
+
+header .navbar-inner {
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  box-shadow: none;
+}
+
+.navbar-static-top {
+  margin-bottom: 20px;
+}
+
+.navbar .nav { float: right; }
+
+
+h1 {
+  font-size: 24px;
+}

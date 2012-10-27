@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Learning System" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Конкурс социальных проектов ИЗМЕНИМ МИР К ЛУЧШЕМУ! " %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Prelaunch Signup" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -10,8 +10,8 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
+    <header class="navbar navbar-static-top">
+      <nav class="navbar-inner clearfix">
         <div class="container">
           <%= render 'layouts/navigation' %>
         </div>

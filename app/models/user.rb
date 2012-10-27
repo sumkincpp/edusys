@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   
   # override Devise method
   def active_for_authentication?
-    confirmed? || confirmation_period_valid?
+    (confirmed? || confirmation_period_valid?)
   end
   
   # new function to set the password

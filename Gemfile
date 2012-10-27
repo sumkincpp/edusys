@@ -20,6 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#settings
+gem 'ledermann-rails-settings', :require => 'rails-settings'
+
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test

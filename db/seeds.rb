@@ -14,3 +14,8 @@ user2 = User.create! :name => 'Fedor Vompe', :email => 'fvompe@dnttm.ru', :passw
 user2.confirm!
 puts 'Admin created: ' << user2.name
 user2.add_role :admin
+
+user3 = User.create! :name => 'Administrator', :email => 'konkurs@maildvorec.ru', :password => 'K0nkUr%S', :password_confirmation => 'K0nkUr%S'
+user3.confirm!
+puts 'Admin created: ' << user3.name
+user3.add_role :admin

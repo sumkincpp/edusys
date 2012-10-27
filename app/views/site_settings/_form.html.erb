@@ -1,0 +1,19 @@
+<%= simple_form_for(@site_setting) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :var %>
+
+    <%= f.input :value %>
+
+    <%= f.input :target_id %>
+
+    <%= f.input :target_type %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

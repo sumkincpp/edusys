@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Var:</b>
+  <%= @site_setting.var %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @site_setting.value %>
+</p>
+
+<p>
+  <b>Target:</b>
+  <%= @site_setting.target_id %>
+</p>
+
+<p>
+  <b>Target type:</b>
+  <%= @site_setting.target_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_setting_path(@site_setting) %> |
+<%= link_to 'Back', site_settings_path %>
