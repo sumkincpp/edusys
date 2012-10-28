@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>District:</b>
+  <%= @change_world_project.district %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%= @change_world_project.school %>
+</p>
+
+<p>
+  <b>Nomination:</b>
+  <%= @change_world_project.nomination %>
+</p>
+
+<p>
+  <b>Project name:</b>
+  <%= @change_world_project.project_name %>
+</p>
+
+<p>
+  <b>Authors:</b>
+  <%= @change_world_project.authors %>
+</p>
+
+<p>
+  <b>Supervisor:</b>
+  <%= @change_world_project.supervisor %>
+</p>
+
+<p>
+  <b>Phone sup:</b>
+  <%= @change_world_project.phone_sup %>
+</p>
+
+<p>
+  <b>Phone sup mob:</b>
+  <%= @change_world_project.phone_sup_mob %>
+</p>
+
+
+<%= link_to 'Edit', edit_change_world_project_path(@change_world_project) %> |
+<%= link_to 'Back', change_world_projects_path %>

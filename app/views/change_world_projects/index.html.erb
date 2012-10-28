@@ -1,0 +1,58 @@
+
+<h3>Конкурс: Изменим мир к лучшему!</h3>
+
+<div style="padding: 20px; border: 1px solid #cccccc; margin: 0px 0px 20px 0px">
+Городской конкурс социальных проектов ученической общественности города Москвы «ИЗМЕНИМ МИР К ЛУЧШЕМУ!»<br/>
+<br/>
+<b>Контактная информация</b>:<br/>
+  Назарова Светлана Валерьевна,<br/>
+  мобильный телефон +79104078821,<br/>
+  e-mail nazarova-osi@mail.ru<br/>
+<br/>
+Подавая заявку Вы соглашаетесь со следующими пунктами
+<div><ul>
+  <li><a href="<%= asset_path('change_world_oferta_v.3_0.docx')%>">Офертой</a>
+    <ul>
+      <li>обработка персональных данных</li>
+      <li>передача авторских прав</li>
+    </ul>
+  </li>
+  <li><a href="<%= asset_path('rules2012.rtf')%>">ПОЛОЖЕНИЕ городского конкурса социальных проектов</a></li>
+</ul></div>
+</div>
+
+<% unless @change_world_projects.empty? %>
+<table>
+  <tr>
+    <th>Округ</th>
+    <th>Образовательное Учреждение</th>
+    <th>Номинация</th>
+    <th>Название проекта</th>
+    <th>Авторы</th>
+    <th>Руководитель</th>
+    <th>Телефон</th>
+    <th>Мобильный</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @change_world_projects.each do |change_world_project| %>
+  <tr>
+    <td><%= change_world_project.district %></td>
+    <td><%= change_world_project.school %></td>
+    <td><%= change_world_project.nomination %></td>
+    <td><%= change_world_project.project_name %></td>
+    <td><%= change_world_project.authors %></td>
+    <td><%= change_world_project.supervisor %></td>
+    <td><%= change_world_project.phone_sup %></td>
+    <td><%= change_world_project.phone_sup_mob %></td>
+    <td><%= link_to 'Show', change_world_project %></td>
+    <td><%= link_to 'Edit', edit_change_world_project_path(change_world_project) %></td>
+    <td><%= link_to 'Destroy', change_world_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<% end %>
+<%= link_to 'Добавить проект', new_change_world_project_path %>

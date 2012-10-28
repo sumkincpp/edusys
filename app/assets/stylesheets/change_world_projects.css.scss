@@ -1,0 +1,21 @@
+// Place all the styles related to the change_world_projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#new_change_world_project .control-label {
+  width: 300px;
+}
+
+#new_change_world_project th{
+  padding: 20px 0px;
+}
+
+#change_world_project_authors {
+  width: 380px;
+  height: 100px;
+}
+.control-group select {
+  width: 395px;
+}
+.control-group input {
+  width: 380px;
+}

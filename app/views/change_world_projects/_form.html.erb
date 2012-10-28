@@ -1,0 +1,33 @@
+<%= simple_form_for(@change_world_project, :html => { :class => 'form-horizontal'} ) do |f| %>
+  <% #f.error_notification %>
+  <p style="color: #8b0000;">Символом * отмечены обязательные для заполнения поля</p>
+
+  <% #render "shared/form_errors", :object => @change_world_project %>
+
+  <div class="form-inputs">
+    <p><div class="control-group enum required"><%= f.label :district %> <%= f.enum_select :district %></div></p>
+    <p><%= f.input :school %> </p>
+    <p><%= f.label :nomination %></p>
+    <p><div class="control-group enum required"><%= f.enum_select :nomination %></div></p>
+    <p><%= f.input :project_name %></p>
+    <p><%= f.input :authors %></p>
+    <p><%= f.input :supervisor %></p>
+    <p><%= f.input :phone_sup %></p>
+    <p><%= f.input :phone_sup_mob %></p>
+    <p><div class="control-group tel optional"><%= f.label :email %>
+         <div><%= current_user.email %> <br/>
+           <a href="<%= url_for edit_user_registration_path %>" target="_blank"> Изменить </>
+         </div>
+       </div>
+    </p>
+    <p><%= f.label :document %>
+    <%= link_to File.basename(@change_world_project.document_url.to_s), @change_world_project.document_url.to_s %><br/>
+      <%= f.file_field :document %></p>
+
+
+  </div>
+
+  <div class="form-actions">
+    <p style="margin-left: 160px "><%= f.button :submit, "Сохранить" %></p>
+  </div>
+<% end %>
