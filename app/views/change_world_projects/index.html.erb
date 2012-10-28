@@ -38,7 +38,7 @@
 
 <% @change_world_projects.each do |change_world_project| %>
   <tr>
-    <td><%= change_world_project.id + '/' + change_world_project.project_uid %></td>
+    <td><%= change_world_project.id.to_s + '/' + change_world_project.project_uid %></td>
     <td><%= change_world_project.school %></td>
     <td><%= change_world_project.nomination %></td>
     <td><%= change_world_project.project_name %></td>

@@ -286,7 +286,7 @@ ru:
         username: 'Имя пользователя'
         password: 'Пароль'
         remember_me: 'Запомнить'
-        password_confirmation: 'Пароль еше раз'
+        password_confirmation: 'Пароль еще раз'
 #    hints:
 #      user:
 #        username: 'Имя пользователя для входа.'
