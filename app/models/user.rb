@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :opt_in
   
   after_create :add_user_to_mailchimp unless Rails.env.test?
-  before_destroy :remove_user_from_mailchimp unless Rails.env.test?
+  before_destroy :remove_user_from_mailchimp unless Rails.env.test? || Rails.env.development? || true
 
   # override Devise method
   # no password is required when the account is created; validate password when the user sets one
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   
   # override Devise method
   def active_for_authentication?
-    (confirmed? || confirmation_period_valid?)
+    (confirmed? || confirmation_period_valid?) || Settings.registration_opened
   end
   
   # new function to set the password

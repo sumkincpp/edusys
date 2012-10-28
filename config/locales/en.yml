@@ -4,3 +4,7 @@
 en:
   login: "Login"
   sign_up: "Sign Up"
+  no_instructions: "Didn't receive confirmation instructions?"
+  reset_instructions: "Send me reset password instructions"
+  request_invite: Request Invite
+  close: Close
