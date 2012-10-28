@@ -15,15 +15,14 @@
     <p><%= f.input :phone_sup %></p>
     <p><%= f.input :phone_sup_mob %></p>
     <p><div class="control-group tel optional"><%= f.label :email %>
-         <div><%= current_user.email %> <br/>
-           <a href="<%= url_for edit_user_registration_path %>" target="_blank"> Изменить </>
+         <div><%= (@change_world_project.users.first && @change_world_project.users.first.email) || current_user.email %> <br/>
+           <a href="<%= url_for edit_user_registration_path %>" target="_blank"> Изменить </a>
          </div>
        </div>
     </p>
     <p><%= f.label :document %>
     <%= link_to File.basename(@change_world_project.document_url.to_s), @change_world_project.document_url.to_s %><br/>
       <%= f.file_field :document %></p>
-
 
   </div>
 

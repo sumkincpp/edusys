@@ -2,6 +2,7 @@
 <h3>Конкурс: Изменим мир к лучшему!</h3>
 
 <div style="padding: 20px; border: 1px solid #cccccc; margin: 0px 0px 20px 0px">
+<img src="<%= asset_path "logo237x250.jpg" %>" style="float:right"/>
 Городской конкурс социальных проектов ученической общественности города Москвы «ИЗМЕНИМ МИР К ЛУЧШЕМУ!»<br/>
 <br/>
 <b>Контактная информация</b>:<br/>
@@ -22,10 +23,9 @@
 </div>
 
 <% unless @change_world_projects.empty? %>
-<table>
+<table style="width: 100%">
   <tr>
-    <th>Округ</th>
-    <th>Образовательное Учреждение</th>
+    <th>Образовательное <br/>Учреждение</th>
     <th>Номинация</th>
     <th>Название проекта</th>
     <th>Авторы</th>
@@ -33,13 +33,10 @@
     <th>Телефон</th>
     <th>Мобильный</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @change_world_projects.each do |change_world_project| %>
   <tr>
-    <td><%= change_world_project.district %></td>
     <td><%= change_world_project.school %></td>
     <td><%= change_world_project.nomination %></td>
     <td><%= change_world_project.project_name %></td>
@@ -47,9 +44,9 @@
     <td><%= change_world_project.supervisor %></td>
     <td><%= change_world_project.phone_sup %></td>
     <td><%= change_world_project.phone_sup_mob %></td>
-    <td><%= link_to 'Show', change_world_project %></td>
-    <td><%= link_to 'Edit', edit_change_world_project_path(change_world_project) %></td>
-    <td><%= link_to 'Destroy', change_world_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Просмотреть', change_world_project %><br/>
+        <%= link_to 'Редактировать', edit_change_world_project_path(change_world_project) %><br/>
+        <%= link_to 'Удалить', change_world_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

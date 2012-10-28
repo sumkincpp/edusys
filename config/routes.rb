@@ -1,9 +1,12 @@
 RailsPrelaunchSignup::Application.routes.draw do
 
   authenticated :user do
-    root :to => 'home#index'
+    #root :to => 'home#index'
+    root :to => 'change_world_projects#index'
   end
 
+
+  #resources :change_world_projects, :path => 'changeworld'
 
   devise_scope :user do
     root :to => "devise/registrations#new"
@@ -11,7 +14,6 @@ RailsPrelaunchSignup::Application.routes.draw do
 
     # resources :groups
     #resources :site_settings, :path => 'settings'
-
     resources :change_world_projects, :path => 'changeworld'
   end
 

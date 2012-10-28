@@ -17,7 +17,9 @@
 #  def self.human_attribute_name(attribute)
 #    HUMANIZED_COLUMNS[attribute.to_sym] || super
 # end
-
-
   validates_presence_of :document, :nomination, :district, :school, :project_name, :authors, :phone_sup, :supervisor
+
+  def project_uid
+    "001-" + Time.new().year.to_s[2..4] + ("-%05d" % self.id)
+  end
 end

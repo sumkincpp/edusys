@@ -1,45 +1,68 @@
+<h2>Проект <%= @change_world_project.project_name %></h2>
+
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <b>District:</b>
+  <b>Идентификатор проекта:</b>
+  <%= @change_world_project.project_uid %>
+</p>
+
+<p>
+  <b>Проект добавлен:</b>
+  <%= @change_world_project.created_at.strftime("%F %T") %>
+</p>
+
+
+<p>
+  <b>Округ:</b>
   <%= @change_world_project.district %>
 </p>
 
 <p>
-  <b>School:</b>
+  <b>Школа:</b>
   <%= @change_world_project.school %>
 </p>
 
 <p>
-  <b>Nomination:</b>
+  <b>Номинация:</b>
   <%= @change_world_project.nomination %>
 </p>
 
 <p>
-  <b>Project name:</b>
+  <b>Название проекта:</b>
   <%= @change_world_project.project_name %>
 </p>
 
 <p>
-  <b>Authors:</b>
+  <b>Авторы:</b>
   <%= @change_world_project.authors %>
 </p>
 
 <p>
-  <b>Supervisor:</b>
+  <b>Руководитель:</b>
   <%= @change_world_project.supervisor %>
 </p>
 
 <p>
-  <b>Phone sup:</b>
+  <b>Контактный Телефон:</b>
   <%= @change_world_project.phone_sup %>
 </p>
 
 <p>
-  <b>Phone sup mob:</b>
+  <b>Мобильный телефон:</b>
   <%= @change_world_project.phone_sup_mob %>
+</p>
+<p>
+  <b>Электронная почта:</b>
+  <%= (@change_world_project.users.first && @change_world_project.users.first.email) || current_user.email %>
+  <a href="<%= url_for edit_user_registration_path %>" target="_blank">(Изменить)</a>
+</p>
+<p>
+  <b>Аннотация к проекту:</b>
+  <%= link_to File.basename(@change_world_project.document_url.to_s), @change_world_project.document_url.to_s %>
 </p>
 
 
-<%= link_to 'Edit', edit_change_world_project_path(@change_world_project) %> |
-<%= link_to 'Back', change_world_projects_path %>
+<%= link_to 'Редактировать', edit_change_world_project_path(@change_world_project) %> |
+<%= link_to 'Назад', change_world_projects_path %>

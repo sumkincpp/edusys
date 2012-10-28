@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+﻿class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def default_url_options
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def validate_admin!
-    authorize! :index, @user, :message => 'Sorry, you have no acces to perform this action'
+    authorize! :index, @user, :message => 'У вас нет прав для выполнения этого действия'
   end
 
 end

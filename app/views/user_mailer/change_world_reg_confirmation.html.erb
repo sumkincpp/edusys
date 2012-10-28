@@ -1,0 +1,11 @@
+﻿Здравствуйте <%= @user.name%>,
+
+<p>Ваш проект успешно зарегистрирован в городском конкурсе <br/>социальных проектов ученической общественности города Москвы «ИЗМЕНИМ МИР К ЛУЧШЕМУ!»</p>
+
+<p>Список ваших добавленных проектов : <br/>
+
+<% @user.change_world_projects.each do |project| %>
+  <%= link_to project.project_uid + "   " + project.project_name, change_world_project_url(project) %> <br/>
+<% end %>
+</p>
+

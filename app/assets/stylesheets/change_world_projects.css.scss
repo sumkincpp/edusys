@@ -5,7 +5,7 @@
   width: 300px;
 }
 
-#new_change_world_project th{
+#new_change_world_project th, table th{
   padding: 20px 0px;
 }
 
@@ -18,4 +18,8 @@
 }
 .control-group input {
   width: 380px;
+}
+
+.content a {
+  color: #4169e1;
 }
