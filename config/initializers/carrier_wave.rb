@@ -5,4 +5,5 @@ CarrierWave.configure do |config|
   config.ftp_passwd = "T694aFYA"
   config.ftp_folder = "/documents"
   config.ftp_url = "http://konkurs.dvorec-pionerov.ru/documents"
+  config.ftp_passive = true
 end

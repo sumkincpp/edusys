@@ -19,3 +19,5 @@ user3 = User.create! :name => 'Administrator', :email => 'konkurs@maildvorec.ru'
 user3.confirm!
 puts 'Admin created: ' << user3.name
 user3.add_role :admin
+
+Settings.registration_opened = true
