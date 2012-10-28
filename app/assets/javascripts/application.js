@@ -68,3 +68,8 @@ function loadSocial() {
       $.getScript('https://apis.google.com/js/plusone.js');
     }
 }
+
+
+$(document).ready(function(){
+/*    $("#new_change_world_project .form-actions input").attr("disabled", "disabled"); */
+});

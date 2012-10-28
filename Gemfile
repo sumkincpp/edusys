@@ -20,6 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'enum_column3'
+
+#gem "paperclip", "~> 3.0" #attachments
+
+gem 'carrierwave'
+gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp'
+
 #settings
 gem 'ledermann-rails-settings', :require => 'rails-settings'
 

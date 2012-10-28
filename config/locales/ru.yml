@@ -256,21 +256,37 @@ ru:
     errors:
       <<: *errors
   login: Войти
+  logout: Выйти
   sign_up: Зарегистрироваться
+  edit_account: Редактирование аккаунта
+  account_activation: Активация аккаунт
+  activate: Активировать
   sign_in: Войти
   remember_me: Запомнить
   close: Закрыть
   request_invite: Получить приглашение
   forgot_your_password: Забыли пароль?
-  reset_instructions: "Получить по почте инструкцию по восстановлению пароля"
-  no_instructions: "Не получили письмо?"
-  Close: Закрыть
+  reset_instructions: 'Получить по почте инструкцию по восстановлению пароля'
+  no_instructions: 'Не получили письмо?'
+  change_world: Городской конкурс социальных проектов ученической общественности города Москвы «ИЗМЕНИМ МИР К ЛУЧШЕМУ!»
   simple_form:
     labels:
+      change_world_project:
+        district: Округ
+        school: Образовательное учреждение
+        nomination: Номинация
+        project_name: Название проекта
+        authors: Авторы проекта(фамилия имя класс)
+        supervisor: Руководитель проекта(ФИО, должность)
+        phone_sup: Контактный телефон руководителя проекта
+        phone_sup_mob: Мобильный телефон руководителя проекта
+        email: E-mail руководителя проекта
+        document: Файл аннотации
       user:
         username: 'Имя пользователя'
         password: 'Пароль'
         remember_me: 'Запомнить'
+        password_confirmation: 'Пароль еше раз'
 #    hints:
 #      user:
 #        username: 'Имя пользователя для входа.'

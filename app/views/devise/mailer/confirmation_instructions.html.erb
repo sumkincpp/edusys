@@ -3,6 +3,6 @@
 <p>Мы рады пригласить Вас на сайт <%= link_to URI(root_url).host, root_url %>.</p>
 
 <p>Чтобы продолжить регистрацию, проследуйте по ссылке : <br/>
-<%= confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<%= link_to confirmation_url(@resource, :confirmation_token => @resource.confirmation_token), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 
 <p>Если запрос о регистрации сделали не Вы, просто проигнорируйте это сообщение.</p>

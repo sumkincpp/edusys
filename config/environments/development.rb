@@ -13,7 +13,7 @@ RailsPrelaunchSignup::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  config.site_host = 'localhost:3000'
+  config.site_host = 'localhost'
 
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => config.site_host }
@@ -50,6 +50,9 @@ RailsPrelaunchSignup::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+
+  config.assets.enabled = true
+  config.assets.paths << "#{Rails.root}/app/assets/files"
 
   # Expands the lines which load the assets
   config.assets.debug = true

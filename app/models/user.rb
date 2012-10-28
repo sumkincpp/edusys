@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :user_groups
   has_many :groups, :through => :user_groups
 
+  has_and_belongs_to_many :change_world_projects
+
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :opt_in
   
   after_create :add_user_to_mailchimp unless Rails.env.test?
@@ -32,7 +34,7 @@ class User < ActiveRecord::Base
   
   # override Devise method
   def active_for_authentication?
-    (confirmed? || confirmation_period_valid?) || Settings.registration_opened
+    (confirmed? || confirmation_period_valid?)
   end
   
   # new function to set the password

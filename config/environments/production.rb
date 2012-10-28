@@ -81,6 +81,8 @@ RailsPrelaunchSignup::Application.configure do
       password: ENV["GMAIL_PASSWORD"]
   }
 
+  config.assets.enabled = true
+  config.assets.paths << "#{Rails.root}/app/assets/files"
 
 
   # Log the query plan for queries taking more than this (works
