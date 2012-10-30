@@ -265,6 +265,7 @@ ru:
   remember_me: Запомнить
   close: Закрыть
   request_invite: Получить приглашение
+  registration: Зарегистрироваться
   forgot_your_password: Забыли пароль?
   reset_instructions: 'Получить по почте инструкцию по восстановлению пароля'
   no_instructions: 'Не получили письмо?'

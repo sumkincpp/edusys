@@ -1,26 +1,7 @@
 
 <h3>Конкурс: Изменим мир к лучшему!</h3>
 
-<div style="padding: 20px; border: 1px solid #cccccc; margin: 0px 0px 20px 0px">
-<img src="<%= asset_path "logo237x250.jpg" %>" style="float:right"/>
-Городской конкурс социальных проектов ученической общественности города Москвы «ИЗМЕНИМ МИР К ЛУЧШЕМУ!»<br/>
-<br/>
-<b>Контактная информация</b>:<br/>
-  Назарова Светлана Валерьевна,<br/>
-  мобильный телефон +79104078821,<br/>
-  e-mail nazarova-osi@mail.ru<br/>
-<br/>
-Подавая заявку Вы соглашаетесь со следующими пунктами
-<div><ul>
-  <li><a href="<%= asset_path('change_world_oferta_v.3_0.docx')%>">Офертой</a>
-    <ul>
-      <li>обработка персональных данных</li>
-      <li>передача авторских прав</li>
-    </ul>
-  </li>
-  <li><a href="<%= asset_path('rules2012.rtf')%>">ПОЛОЖЕНИЕ городского конкурса социальных проектов</a></li>
-</ul></div>
-</div>
+<%= render 'rules' %>
 
 <% unless @change_world_projects.empty? %>
 <table style="width: 100%">
@@ -54,4 +35,4 @@
 </table>
 <br />
 <% end %>
-<%= link_to 'Добавить проект', new_change_world_project_path %>
+<%= link_to 'Добавить проект', new_change_world_project_path, :class => 'btn btn-large btn-primary' %>
