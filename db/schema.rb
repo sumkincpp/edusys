@@ -11,20 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028231210) do
+ActiveRecord::Schema.define(:version => 20121031023100) do
 
   create_table "change_world_projects", :force => true do |t|
-    t.enum     "district",      :limit => [:Центральный, :Северный, :"Северо-Восточный", :Восточный, :"Юго-Восточный", :Южный, :"Юго-Западный", :Западный, :"Северо-Западный", :Зеленоградский, :Новомосковский, :Троицкий]
+    t.enum     "district",        :limit => [:Центральный, :Северный, :"Северо-Восточный", :Восточный, :"Юго-Восточный", :Южный, :"Юго-Западный", :Западный, :"Северо-Западный", :Зеленоградский, :Новомосковский, :Троицкий]
     t.string   "school"
-    t.enum     "nomination",    :limit => [:"социальный проект", :"социальная реклама", :"проект по социальному заказу"]
+    t.enum     "nomination",      :limit => [:"Педагогические инновации", :"Экономические инновации", :"Инновации в области физкультурно-спортивной деятельности", :"Инновационные проекты в области культурно-массовой", :"Организационно-управленческие инновации"]
     t.string   "project_name"
     t.text     "authors"
     t.string   "supervisor"
     t.string   "phone_sup"
     t.string   "phone_sup_mob"
     t.string   "document"
-    t.datetime "created_at",                                                                                                                                                                                                 :null => false
-    t.datetime "updated_at",                                                                                                                                                                                                 :null => false
+    t.datetime "created_at",                                                                                                                                                                                                                                           :null => false
+    t.datetime "updated_at",                                                                                                                                                                                                                                           :null => false
+    t.enum     "directive_type",  :limit => [:"О мерах по реализации государственной политики в области образования и науки", :"Развитие образования города Москвы (\"Столичное образование\")"]
+    t.text     "directive_text"
+    t.text     "concept"
+    t.text     "purpose"
+    t.text     "resources"
+    t.text     "current_results"
+    t.text     "future_results"
   end
 
   create_table "change_world_projects_users", :id => false, :force => true do |t|

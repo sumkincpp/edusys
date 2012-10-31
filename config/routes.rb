@@ -14,7 +14,7 @@ RailsPrelaunchSignup::Application.routes.draw do
 
     # resources :groups
     #resources :site_settings, :path => 'settings'
-    resources :change_world_projects, :path => 'changeworld'
+    resources :change_world_projects, :path => '/'
   end
 
   devise_for :users, :controllers => { :registrations => "registrations", :confirmations => "confirmations" }
