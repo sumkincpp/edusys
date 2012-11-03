@@ -1,11 +1,14 @@
 @import "bootstrap";
-body { padding-top: 20px; }
+
 @import "bootstrap-responsive";
 
 
-header .navbar-inner {
-  background-color: #ffffff;
+
+.navbar, .navbar-inner {
+  background-color: #fff; /* background color will be black for all browsers */
   background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
 }
 
 .navbar-fixed-top .navbar-inner,
