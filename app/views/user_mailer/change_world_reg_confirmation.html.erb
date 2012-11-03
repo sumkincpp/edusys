@@ -4,8 +4,11 @@
 
 <p>Список ваших добавленных проектов : <br/>
 
-<% @user.change_world_projects.each do |project| %>
+<p><% @user.change_world_projects.each do |project| %>
   <%= link_to project.project_uid + "   " + project.project_name, change_world_project_url(project) %> <br/>
 <% end %>
 </p>
 
+<p>Благодарим за обращение.
+(с) Московский Дворец пионеров (ГБОУ МГДД(Ю)Т)
+<a href="http://www.dvorec-pionerov.ru">www.dvorec-pionerov.ru</a></p>

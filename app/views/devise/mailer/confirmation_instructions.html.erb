@@ -1,8 +1,12 @@
 <p>Здравствуйте, <%= @resource.email %>!</p>
 
-<p>Мы рады пригласить Вас на сайт <%= link_to URI(root_url).host, root_url %>.</p>
+<p>Мы рады, что вы посетили наш проект по адресу  <%= link_to URI(root_url).host, root_url %>.</p>
 
 <p>Чтобы продолжить регистрацию, проследуйте по ссылке : <br/>
 <%= link_to confirmation_url(@resource, :confirmation_token => @resource.confirmation_token), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 
 <p>Если запрос о регистрации сделали не Вы, просто проигнорируйте это сообщение.</p>
+
+<p>Благодарим за обращение.
+(с) Московский Дворец пионеров (ГБОУ МГДД(Ю)Т)
+<a href="http://www.dvorec-pionerov.ru">www.dvorec-pionerov.ru</a></p>
