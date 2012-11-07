@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'newrelic_rpm' # New Relic
+
 gem 'enum_column3'
 
 #gem "paperclip", "~> 3.0" #attachments
