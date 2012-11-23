@@ -8,6 +8,32 @@
     else
       @change_world_projects = current_user.change_world_projects.all
     end
+
+    respond_to do |format|
+      format.html
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
+  end
+
+  def export_to_csv
+    validate_admin!
+
+    require 'csv'
+
+    if current_user.has_role?('admin')
+      @projs = ChangeWorldProject.all
+    else
+      @projs = current_user.change_world_projects.all
+    end
+
+    csv = CSV.generate(:force_quotes => true) do |line|
+      #ar = Iconv.conv("UTF-8", "LATIN1", post.to_csv)
+      @projs.map { |post| line << post.to_csv.flatten }
+    end
+
+    send_data csv,
+              :type => 'text/csv; charset=cp1251; header=present',
+              :disposition => "attachment; filename=projects-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
   end
 
   # GET /change_world_projects/new

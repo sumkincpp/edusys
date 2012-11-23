@@ -35,4 +35,9 @@
 </table>
 <br />
 <% end %>
+
 <%= link_to 'Добавить проект', new_change_world_project_path, :class => 'btn btn-large btn-primary' %>
+
+<% if user_signed_in? and current_user.has_role? :admin %>
+<%= link_to 'Экспорт проектов', { :controller => 'change_world_projects', :action => 'export_to_csv' }, :class => 'btn btn-large btn-primary' %>
+<% end %>

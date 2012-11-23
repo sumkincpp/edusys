@@ -3,8 +3,8 @@ RailsPrelaunchSignup::Application.routes.draw do
   authenticated :user do
     #root :to => 'home#index'
     root :to => 'change_world_projects#index'
-  end
-
+    match '/export' => "change_world_projects#export_to_csv"
+  end                                                   #  , :constraints => {:format => :csv}
 
   #resources :change_world_projects, :path => 'changeworld'
 

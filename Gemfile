@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'iconv'
+
 gem 'newrelic_rpm' # New Relic
 
 gem 'enum_column3'

@@ -22,4 +22,20 @@
   def project_uid
     "001-" + Time.new().year.to_s[2..4] + ("-%05d" % self.id)
   end
+
+  def to_csv
+    require 'iconv'
+
+    csv = [project_uid]
+    csv += [:email].map { |f| self.users.first[f] } if self.users.first
+    csv += [:supervisor, :project_name, :authors, :district, :nomination, :phone_sup,
+            :phone_sup_mob, :school].map { |f| Iconv.conv("cp1251", "utf-8", self[f].to_s) }
+    csv += [self.document_url.to_s]
+
+
+    #csv += [:first_name, :last_name, :email].map { |f| self.author[f] }
+  end
+
+
+
 end
