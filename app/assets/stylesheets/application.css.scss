@@ -52,7 +52,7 @@ header {
 
 .dvorets-logo {
   display: block;
-  background-image: url(<%=asset_path "dvorets-logo250x132.jpg"%>);
+  background-image: image_url("dvorets-logo250x132.jpg");
   width: 250px;
   height: 132px;
   float: left;
