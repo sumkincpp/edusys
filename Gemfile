@@ -14,7 +14,7 @@ gem 'json', '1.7.7'
 
 
 gem 'newrelic_rpm' # New Relic
-gem 'enum_column3'
+#gem 'enum_column3'
 
 gem 'carrierwave'
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp'
@@ -27,7 +27,7 @@ gem 'ledermann-rails-settings', '~> 1.0', :require => 'rails-settings'
 gem 'rspec-rails', '>= 2.11.0', :group => [:development, :test]
 gem 'factory_girl_rails', '>= 4.1.0', :group => [:development, :test]
 
-group :development, :production do
+group :development do
   gem 'mysql2'
 end
 

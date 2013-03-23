@@ -14,17 +14,17 @@
 ActiveRecord::Schema.define(:version => 20121028231210) do
 
   create_table "change_world_projects", :force => true do |t|
-    t.enum     "district",      :limit => [:Центральный, :Северный, :"Северо-Восточный", :Восточный, :"Юго-Восточный", :Южный, :"Юго-Западный", :Западный, :"Северо-Западный", :Зеленоградский, :Новомосковский, :Троицкий]
+    t.string   "district",      :limit => 16
     t.string   "school"
-    t.enum     "nomination",    :limit => [:"социальный проект", :"социальная реклама", :"проект по социальному заказу"]
+    t.string   "nomination",    :limit => 28
     t.string   "project_name"
     t.text     "authors"
     t.string   "supervisor"
     t.string   "phone_sup"
     t.string   "phone_sup_mob"
     t.string   "document"
-    t.datetime "created_at",                                                                                                                                                                                                 :null => false
-    t.datetime "updated_at",                                                                                                                                                                                                 :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "change_world_projects_users", :id => false, :force => true do |t|
