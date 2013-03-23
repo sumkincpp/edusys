@@ -20,7 +20,8 @@ gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp'
 #gem 'paperclip', '~> 3.0' #attachments
 
 #settings
-gem 'ledermann-rails-settings', :require => 'rails-settings'
+# :require => 'rails-settings'
+gem 'ledermann-rails-settings', '~> 1.0', :require => 'rails-settings'
 
 gem 'rspec-rails', '>= 2.11.0', :group => [:development, :test]
 gem 'factory_girl_rails', '>= 4.1.0', :group => [:development, :test]

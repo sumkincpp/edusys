@@ -53,12 +53,10 @@
     @change_world_project = ChangeWorldProject.new(params[:change_world_project])
     @change_world_project.users << current_user
 
-    respond_to do |format|
-      if @change_world_project.save
-        format.html { redirect_to @change_world_project, notice: 'Проект был успешно добавлен!' }
-      else
-        format.html { render action: "new" }
-      end
+    if @change_world_project.save
+      redirect_to @change_world_project, notice: 'Проект был успешно добавлен!'
+    else
+      render action: "new"
     end
   end
 
@@ -68,12 +66,10 @@
 
     @change_world_project = ChangeWorldProject.find(params[:id])
 
-    respond_to do |format|
-      if @change_world_project.update_attributes(params[:change_world_project])
-        format.html { redirect_to @change_world_project, notice: 'Проект был успешно обновлен!' }
-      else
-        format.html { render action: "edit" }
-      end
+    if @change_world_project.update_attributes(params[:change_world_project])
+      redirect_to @change_world_project, notice: 'Проект был успешно обновлен!'
+    else
+      render action: "edit"
     end
   end
 
@@ -91,9 +87,7 @@
     @change_world_project = ChangeWorldProject.find(params[:id])
     @change_world_project.destroy
 
-    respond_to do |format|
-      format.html { redirect_to change_world_projects_url }
-    end
+    redirect_to change_world_projects_url
   end
 
   protected
@@ -102,8 +96,7 @@
 
     current_user.change_world_projects.find(params[:id])
   rescue ActiveRecord::RecordNotFound
-    respond_to do |format|
-      format.html { redirect_to change_world_projects_url, notice: 'У вас нет прав для выполнения этого действия' }
-    end
+    redirect_to change_world_projects_url,
+                notice: 'У вас нет прав для выполнения этого действия'
   end
 end
