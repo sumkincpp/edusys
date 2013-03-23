@@ -26,7 +26,8 @@ test: &test
 
 production:
   host: mysql-srv25791.ht-systems.ru
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: 
   username: 
   password: 

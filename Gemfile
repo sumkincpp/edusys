@@ -12,6 +12,8 @@ gem 'google_visualr', '>= 2.1.2'
 gem 'jquery-datatables-rails', '>= 1.11.1'
 gem 'json', '1.7.7'
 
+gem 'pg'
+
 gem 'newrelic_rpm' # New Relic
 gem 'enum_column3'
 
