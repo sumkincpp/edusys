@@ -12,7 +12,6 @@ gem 'google_visualr', '>= 2.1.2'
 gem 'jquery-datatables-rails', '>= 1.11.1'
 gem 'json', '1.7.7'
 
-gem 'pg'
 
 gem 'newrelic_rpm' # New Relic
 gem 'enum_column3'
@@ -31,6 +30,8 @@ gem 'factory_girl_rails', '>= 4.1.0', :group => [:development, :test]
 group :development, :production do
   gem 'mysql2'
 end
+
+gem 'pg', :group => [:production]
 
 group :test do
   gem 'sqlite3'
